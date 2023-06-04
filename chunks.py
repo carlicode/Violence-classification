@@ -18,7 +18,7 @@ def cortar_archivos(carpeta):
         nombre_original = os.path.splitext(archivo)[0]
         audio = AudioSegment.from_wav(os.path.join(carpeta, archivo))
         duracion_total = len(audio)
-        duracion_segmento = 10000  # 10 segundos en milisegundos
+        duracion_segmento = 30000  # 10 segundos en milisegundos
         segmentos = duracion_total // duracion_segmento
         
         for i in range(segmentos):
@@ -27,12 +27,12 @@ def cortar_archivos(carpeta):
             segmento = audio[inicio:fin]
 
             nombre_segmento = f"{nombre_original}_{i+1}.wav"
-            chunks_carpeta = 'C:/Users/Carlita/Desktop/tesis/audios/chunks'
+            chunks_carpeta = 'C:/Users/Carlita/Desktop/tesis/dataset/30segundos/audio_chunks'
             segmento.export(os.path.join(chunks_carpeta, nombre_segmento), format="wav")
             print(f"Segmento guardado: {nombre_segmento}")
 
 if __name__ == "__main__":
-    carpeta = "C:/Users/Carlita/Desktop/tesis/audios"  
+    carpeta = "C:/Users/Carlita/Desktop/tesis/dataset"  
     cortar_archivos(carpeta)
 
 

@@ -29,7 +29,7 @@ def audio_to_text(audio_folder):
             print("Texto extraído del audio {}: {}".format(archivo, texto))
             
             # Guardar el texto en un archivo con el mismo nombre del audio en la carpeta de salida
-            output_folder = "C:/Users/Carlita/Desktop/tesis/audios/texts/"
+            output_folder = "C:/Users/Carlita/Desktop/tesis/dataset/30segundos/texts_chunks/"
             ruta_texto = os.path.join(output_folder + os.path.splitext(archivo)[0] + ".txt")
             with open(ruta_texto, "w") as file:
                 file.write(texto)
@@ -42,6 +42,6 @@ def audio_to_text(audio_folder):
             print("Error al procesar el audio {}: {}".format(archivo, str(e)))
 
 if __name__ == '__main__':
-    carpeta = "C:/Users/Carlita/Desktop/tesis/audios/chunks/"
+    carpeta = "C:/Users/Carlita/Desktop/tesis/dataset/30segundos/audio_chunks"
     
     audio_to_text(carpeta)
