@@ -6,9 +6,9 @@ def wav_files(carpeta):
     archivos_wav = []
     for archivo in archivos:
         ruta_archivo = os.path.join(carpeta, archivo)
-        if os.path.isfile(ruta_archivo) and archivo.endswith(".WAV"):
+        if os.path.isfile(ruta_archivo) and archivo.endswith(".wav"):
             archivos_wav.append(archivo)
-            print(archivos_wav)
+            #print(archivos_wav)
     return archivos_wav
 
 def cortar_archivos(audio_input, chunks_output):
@@ -17,7 +17,7 @@ def cortar_archivos(audio_input, chunks_output):
         nombre_original = os.path.splitext(archivo)[0]
         audio = AudioSegment.from_wav(os.path.join(audio_input, archivo))
         duracion_total = len(audio)
-        duracion_segmento = 10000  # 10 segundos en milisegundos
+        duracion_segmento = 10000  # 15 segundos en milisegundos
         
         if duracion_total <= duracion_segmento:
             # Guardar el audio completo como chunk
@@ -37,6 +37,6 @@ def cortar_archivos(audio_input, chunks_output):
                 print(f"Segmento guardado: {nombre_segmento}")
 
 if __name__ == "__main__":
-    audio_input = "C:/Users/Carlita/Desktop/tesis/dataset/Audios/No Violence"  
-    chunks_output = "C:/Users/Carlita/Desktop/tesis/dataset/Audios/No Violence/Entrevista"
+    audio_input = "C:/Users/Carlita/Desktop/tesis/Experiment 1/people_figthing"
+    chunks_output = "C:/Users/Carlita/Desktop/tesis/Experiment 1 chunks/people_figthing"
     cortar_archivos(audio_input, chunks_output)
