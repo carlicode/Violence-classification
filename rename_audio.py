@@ -14,5 +14,5 @@ def rename_audios(folder_path, prefix):
         count += 1
 
 if __name__ == "__main__":
-    folder_path = "C:/Users/Carlita/Desktop/tesis/Experiment 1 chunks/people_figthing"
-    rename_audios(folder_path, "people_figthing")
+    folder_path = "C:/Users/Carlita/Desktop/tesis/Experiment 1 chunks/people_fighting"
+    rename_audios(folder_path, "people_fighting")
