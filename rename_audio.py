@@ -6,7 +6,7 @@ def rename_audios(folder_path, prefix):
 
     for file in audio_files:
         old_name = os.path.join(folder_path, file)
-        new_name = os.path.join(folder_path, f"{prefix}_{count}.wav")
+        new_name = os.path.join(folder_path, f"{prefix}_{count+67}.wav")
 
         os.rename(old_name, new_name)
         print(f"Renamed {new_name}")
@@ -14,5 +14,5 @@ def rename_audios(folder_path, prefix):
         count += 1
 
 if __name__ == "__main__":
-    folder_path = "C:/Users/Carlita/Desktop/tesis/Experiment 1 chunks/people_fighting"
-    rename_audios(folder_path, "people_fighting")
+    folder_path = "C:/Users/Carlita/Desktop/tesis/Dataset collection/glasses"
+    rename_audios(folder_path, "glass_breaking")

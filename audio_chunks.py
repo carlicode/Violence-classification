@@ -17,7 +17,7 @@ def cortar_archivos(audio_input, chunks_output):
         nombre_original = os.path.splitext(archivo)[0]
         audio = AudioSegment.from_wav(os.path.join(audio_input, archivo))
         duracion_total = len(audio)
-        duracion_segmento = 10000  # 15 segundos en milisegundos
+        duracion_segmento = 10000  # 10 segundos en milisegundos
         
         if duracion_total <= duracion_segmento:
             # Guardar el audio completo como chunk
@@ -37,6 +37,6 @@ def cortar_archivos(audio_input, chunks_output):
                 print(f"Segmento guardado: {nombre_segmento}")
 
 if __name__ == "__main__":
-    audio_input = "C:/Users/Carlita/Desktop/tesis/Experiment 1/people_figthing"
-    chunks_output = "C:/Users/Carlita/Desktop/tesis/Experiment 1 chunks/people_figthing"
+    audio_input = "C:/Users/Carlita/Desktop/tesis/Dataset collection/freesound glass breaking2"
+    chunks_output = "C:/Users/Carlita/Desktop/tesis/Dataset collection/glasses"
     cortar_archivos(audio_input, chunks_output)

@@ -22,6 +22,6 @@ def rename_audio_files(root_folder):
                     print(f"Renamed: {filename} -> {new_filename}")
 
 if __name__ == "__main__":
-    root_folder = "C:/Users/Carlita/Desktop/tesis/Experiment 2"  
+    root_folder = "C:/Users/Carlita/Desktop/tesis/Experiment 1 chunks/no_violence"  
 
     rename_audio_files(root_folder)

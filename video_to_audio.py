@@ -14,13 +14,11 @@ def convert_videos_to_audio(video_folder, audio_folder):
 
         video = VideoFileClip(video_path)
         audio = video.audio
-
         audio.write_audiofile(audio_path, codec='pcm_s16le')
-
         video.close()
         audio.close()
 
 # Ejemplo de uso
-video_folder = 'C:/Users/Carlita/Desktop/tesis/dataset/Real Life Violence Dataset Violence'
-audio_folder = 'C:/Users/Carlita/Desktop/tesis/dataset/Audio'
+video_folder = 'C:/Users/Carlita/Desktop/tesis/Dataset collection/NonViolence'
+audio_folder = 'C:/Users/Carlita/Desktop/tesis/Dataset collection/NonViolenceAudio'
 convert_videos_to_audio(video_folder, audio_folder)

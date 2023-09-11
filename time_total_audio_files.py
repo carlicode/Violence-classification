@@ -22,7 +22,7 @@ def calcular_tiempo_total(carpeta):
     return horas, minutos, segundos
 
 if __name__ == "__main__":
-    carpeta_audios = "C:/Users/Carlita/Desktop/tesis/dataset/Audios/11 people talking"
+    carpeta_audios = "C:/Users/Carlita/Desktop/tesis/Experiment 2 chunks duration 9/screams"
     tiempo_horas, tiempo_minutos, tiempo_segundos = calcular_tiempo_total(carpeta_audios)
 
     print(f"Tiempo total: {tiempo_horas} horas {tiempo_minutos} minutos {tiempo_segundos} segundos")
